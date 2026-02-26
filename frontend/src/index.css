@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  /* shadcn-style tokens for dashboard */
+  --color-border: hsl(215 20% 25%);
+  --color-input: hsl(215 20% 25%);
+  --color-ring: hsl(217 91% 60%);
+  --color-background: hsl(222.2 84% 4.9%);
+  --color-foreground: hsl(210 40% 98%);
+  --color-primary: hsl(217 91% 60%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(222.2 47.4% 11.2%);
+  --color-secondary-foreground: hsl(210 40% 96%);
+  --color-muted: hsl(215 27.9% 16.9%);
+  --color-muted-foreground: hsl(215.4 16.3% 56.9%);
+  --color-accent: hsl(251 95% 63%);
+  --color-accent-foreground: hsl(0 0% 100%);
+  --color-destructive: hsl(0 62.8% 45.6%);
+  --color-destructive-foreground: hsl(210 40% 98%);
+  --color-card: hsl(222.2 84% 4.9%);
+  --color-card-foreground: hsl(210 40% 98%);
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}

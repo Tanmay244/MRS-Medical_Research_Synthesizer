@@ -1,0 +1,29 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv
+venv
+__pycache__
+*.py[cod]
+*.pyo
+.Python
+*.egg-info
+.eggs
+dist
+build
+
+# Node (root-level if any)
+node_modules
+
+# Data and local state (root-level only, not frontend/src/data)
+/data/
+*.local
+
+# IDE and OS
+.idea
+.vscode/*
+!.vscode/extensions.json
+.DS_Store

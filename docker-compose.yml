@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      target: development
+    environment:
+      - APP_NAME=Medical Research Synthesizer (Local)
+      - VECTOR_STORE_PATH=/workspace/data/vector_store.json
+      - S3_BUCKET=local-research-bucket
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_REGION=us-east-1
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/workspace
+    depends_on:
+      - s3
+
+  s3:
+    image: minio/minio:RELEASE.2024-04-06T05-26-02Z
+    command: server /data --console-address :9001
+    environment:
+      - MINIO_ROOT_USER=test
+      - MINIO_ROOT_PASSWORD=testtest
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - s3-data:/data
+
+volumes:
+  s3-data:
+
+
